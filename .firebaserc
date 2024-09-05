@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "new23-768df"
+  },
+  "targets": {
+    "new23-768df": {
+      "hosting": {
+        "blog": [
+          "testfads"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,278 @@
+/* Style du fond de page */
+
+  
+  /* Conteneur principal pour le formulaire de téléchargement */
+  .upload-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Blanc avec 90% opacité */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(225, 225, 225, 0.2); /* Bordure avec 70% opacité */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  /* Style du formulaire de téléchargement */
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+  
+  /* Groupe d'entrée avec label */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  /* Style pour les labels */
+  .input-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Style pour le champ de texte */
+  .text-input {
+    padding: 12px;
+    font-size: 16px;
+    background-color: rgba(248, 248, 248, 0.2);
+    border: 1px solid rgba(209, 209, 209, 0.2);
+
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+  }
+  
+  /* Style pour le champ de texte au survol ou au focus */
+  .text-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Style pour le champ de fichier */
+  .file-input {
+    padding: 12px;
+    border: 1px solid rgba(209, 209, 209, 0.2); /* Bordure avec 70% opacité */
+    border-radius: 8px;
+    background-color: rgba(248, 248, 248, 0.2); /* Fond avec 90% opacité */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+  
+  /* Style pour le champ de fichier au survol */
+  .file-input:hover {
+    background-color: #e1e1e1;
+  }
+  
+  /* Conteneur pour la barre de progression */
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Style pour le texte de la progression */
+  .progress-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Style pour la barre de progression */
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(225, 225, 225, 0.2); /* Fond avec 80% opacité */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+  
+  /* Style pour l'élément de progression */
+  .progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 8px;
+    transition: width 0.4s ease;
+  }
+  
+  /* Style pour le bouton "Start" */
+  .star {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(220, 178, 51);
+    overflow: hidden;
+    padding: 20px 70px;
+    font-size: 190%;
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 20%;
+    box-shadow: 0 20px 50px rgb(255 255 255 / 5%);
+    height: 2%;
+    width: 5%;
+    cursor: pointer;
+  }
+  
+  /* Animation de déplacement vers le bas */
+  @keyframes moveDown {
+    0% { transform: translateY(-20px); }
+    100% { transform: translateY(20px); }
+  }
+  
+  /* Styles pour les éléments d'animation */
+  a span:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgb(166, 83, 0), rgb(255, 140, 0));
+    animation: animate1 2s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  a span:nth-child(2) {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgb(166, 83, 0), rgb(255, 140, 0));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate2 {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  
+  a span:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgb(240, 192, 90), rgb(255, 140, 0));
+    animation: animate3 2s linear infinite;
+  }
+  
+  @keyframes animate3 {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  a span:nth-child(4) {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(240, 192, 90), rgb(255, 140, 0));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate4 {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+  }
+  
+  /* Positionnement du bouton "Back to Home" */
+  .back-to-home-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  /* You can add global styles to this file, and also import other style files */
+  .bg-img {
+    position: fixed;
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    z-index: -1; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0.9; /* Applique 20% de transparence */
+  }
+  
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Assure que le bouton est au-dessus des autres éléments */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8); /* Texte avec 80% opacité */
+    background-color: rgba(166, 86, 0, 0.4); /* Fond avec 20% opacité */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 86, 179, 0.2); /* Fond au survol avec 20% opacité */
+  }
+  
+  button:disabled {
+    background-color: rgba(204, 204, 204, 0.2); /* Fond désactivé avec 20% opacité */
+    cursor: not-allowed;
+  }
+  /* Container for the welcome message */
+.welcome-container {
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* Heading styles */
+.welcome-heading {
+    font-size: 3.9rem;
+    color: rgba(166, 86, 0);
+    text-shadow: 2px 2px 4px rgba(166, 86, 0, 0.5);
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(45deg, rgb(255, 196, 0), #f9c);
+    -webkit-background-clip: text;
+
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
